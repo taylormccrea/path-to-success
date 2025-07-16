@@ -1,3 +1,49 @@
+/* CSS Reset */
+/* http://meyerweb.com/eric/tools/css/reset/ v2.0 | 20110126 License: none (public domain) */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* Root Variables */
 :root {
     --Teal :#4CA7C0;
     --Purple: #484FB7;
@@ -11,27 +57,16 @@
     --body-fonts: Inter;
 
 }
-
+/* Global Styles */
 html {
     font-family: var(--body-fonts);
     background-color: var(--Lavender);
     max-width: 450px;
+    margin: 0 auto;
 }
 
 body {
     background-color: var(--Purple);
-    
-    
-}
-
-#Menu {
-    background-color: var(--Yellow);
-}
-
-
-h1, h2 {
-    font-family: var(--heading-fonts);
-    color: var(--White);
 }
 
 h1 {
@@ -40,24 +75,215 @@ h1 {
 
 h2 {
     font-size: 2em;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 
-nav h2 {
-    font-size: 1.5em;
+h1, h2 {
+    font-family: var(--heading-fonts);
+    color: var(--White);
 }
 
 h3 {
     font-size: 1.5em;
+    color: var(--Yellow);
+    font-weight: bold;
 }
 
 h4 {
     font-size: 1.15em;
+    color: var(--Purple);
+    font-weight: bold;
+    padding-top: 8px;
+    padding-bottom: 8px;
+}
+
+p {
+    line-height: 1.35;
+}
+
+header {
+    text-align: center;
+    padding-top: 15px;
+}
+
+header h1 {
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+
+header p {
+    color: var(--White);
+    font-style: italic;
+    padding-top: 8px;
+}
+
+#Menu {
+    background-color: var(--Yellow);
+    text-transform: uppercase;
+    text-align: center;
+    padding-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-top: 30px;
+}
+
+nav {
+    padding-top: 5px;
+}
+
+nav h2 {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin-bottom: 5px;
+    margin-top: 5px;
+    font-family: var(--body-fonts);
+    color: var(--Dark-gray);
+    font-style: italic;
+}
+
+nav ul {
+    list-style-type: none;
+    
+}
+
+nav li {
+    padding: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    background-color: var(--White);
+    display: grid;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    font-weight: bold;
+}
+
+#ourServices, #whyChooseUs, #Pricing, #firstStep {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#ourServices h2, h3{
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+#ourServices div {
+    background-color: var(--White);
+    margin: 20px;
+    padding: 20px;
+    border-radius: 12px;
 }
 
 #whyChooseUs {
     background-color: var(--Pink);
+    padding-bottom: 10px;
+}
+
+#whyChooseUs ul {
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 200px 200px;
+    margin: 5px auto;
+    padding: 0;
+    font-weight: bold;
+}
+
+#whyChooseUs li {
+    text-align: center;
+    padding: 30px;
+    border-radius: 12px;
+    margin: 8px;
+}
+
+#PA {
+    background-color: var(--Teal);
+}
+
+#PR {
+    background-color: var(--Lavender);
+}
+
+#SE {
+    background-color: var(--Yellow);
+}
+
+#FO {
+    background-color: var(--White);
+}
+
+#Pricing h3 {
+    margin-top: 8px;
+    margin-bottom: 8px;
+    padding-bottom: 8px;
+}
+
+#Pricing div {
+    padding-bottom: 10px;
+}
+
+table {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
+}
+
+th {
+    background-color: var(--Yellow);
+    text-transform: uppercase;
+}
+
+td {
+    background-color: var(--White);
+    margin: 1px;
+}
+
+th, td {
+    padding: 15px;
+    border: solid 3px var(--Yellow);
 }
 
 #firstStep {
     background-color: var(--Pink);
+    color: var(--White);
+    padding-bottom: 10px;
+}
+
+#firstStep p {
+    margin-bottom: 10px;
+}
+
+#Schedule {
+    background-color: var(--White);
+    color: var(--Dark-gray);
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-right: 30%;
+    padding-left: 30%;
+    display: block;
+    margin: 0 auto;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 2px 2px 4px var(--Dark-gray);
+}
+
+footer {
+    color: var(--White);
+    display: grid;
+    grid-template-columns: 50% 50%;
+    margin: 5px auto;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+footer a {
+    color: var(--White);
 }
